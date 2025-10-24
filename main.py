@@ -141,6 +141,11 @@ async def list_models():
     model_data = await provider.get_models()
     return JSONResponse(content=model_data)
 
+@app.get("/sdapi/v1/sd-models", dependencies=[Depends(verify_api_key)])
+async def list_sd_models():
+    model_data = await provider.get_models()
+    return JSONResponse(content=model_data)
+
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
 async def serve_ui():
     try:
