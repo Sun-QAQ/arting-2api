@@ -159,7 +159,7 @@ class ArtingProvider:
         return {
             "prompt": sd_request.get("prompt", ""),
             "negative_prompt": sd_request.get("negative_prompt", ""),
-            "model": sd_request.get("model", "oneFORALLReality_vPony"),
+            "model": sd_request.get("model", "oneFORALLAnime"),
             "n": sd_request.get("batch_size", 1),
             "size": f"{sd_request.get('width', 512)}x{sd_request.get('height', 768)}",
             "sampler": sd_request.get("sampler_name", sd_request.get("sampler_index", "Euler a")),
